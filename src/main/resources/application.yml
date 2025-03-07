@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: order-api
   profiles:
     active: dev
   output:
@@ -37,6 +39,16 @@ management:
   info:
     env:
       enabled: true
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 20  # Enviar heartbeats cada 10s
+    lease-expiration-duration-in-seconds: 60  # Expirar si en 60s no recibe heartbeats
+    instance-id: ${spring.application.name}:${server.port}  # 🔹 Define un ID legible
+    prefer-ip-address: true  # 🔹 Usa IP en lugar de hostname
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
 
 miw:
   url:

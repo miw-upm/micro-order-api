@@ -19,7 +19,7 @@ services:
 networks:
   miw:
     external: true
-#> docker compose -f "docker-compose-kafka.yml" -p pro-kafka up -d
+#> docker compose -f "docker-compose-kafka.yml" -p kafka up -d
 
 #> docker exec kafka kafka-topics.sh --list --bootstrap-server localhost:9092
 #> docker exec kafka kafka-topics.sh --create --topic order-in --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
