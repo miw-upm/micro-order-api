@@ -1,8 +1,8 @@
 services:
-  app:
+  order-api-server:
     build: .
     image: order-api:v1
-    container_name: order-api
+    container_name: order-api-server
     restart: always
     ports:
       - "8082:8082"
@@ -16,4 +16,4 @@ networks:
   miw:
     external: true
 
-#> docker compose -p pro-kafka up --build -d
+#> docker compose up --build -d
