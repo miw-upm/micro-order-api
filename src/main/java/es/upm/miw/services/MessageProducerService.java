@@ -1,6 +1,6 @@
 package es.upm.miw.services;
 
-import es.upm.miw.models.Order;
+import es.upm.miw.data.models.Order;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.beans.factory.annotation.Autowired;

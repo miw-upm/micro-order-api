@@ -1,4 +1,4 @@
-package es.upm.miw.rest.exceptionshandler;
+package es.upm.miw.resorces.exceptionshandler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

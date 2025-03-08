@@ -1,7 +1,7 @@
 package es.upm.miw.services;
 
-import es.upm.miw.models.Order;
-import es.upm.miw.models.User;
+import es.upm.miw.data.models.Order;
+import es.upm.miw.data.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
@@ -23,7 +23,7 @@ public class OrderService {
     }
 
     public Order create(Order order) {
-        User user = this.userClient.getUser(order.getUser().getIdentity());
+        User user = this.userClient.readUserByIdentity(order.getUser().getIdentity());
         Order orderCreated = Order.builder()
                 .identity("1")
                 .productId(order.getProductId())

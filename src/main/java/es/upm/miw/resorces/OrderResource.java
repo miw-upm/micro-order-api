@@ -1,6 +1,6 @@
-package es.upm.miw.rest;
+package es.upm.miw.resorces;
 
-import es.upm.miw.models.Order;
+import es.upm.miw.data.models.Order;
 import es.upm.miw.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

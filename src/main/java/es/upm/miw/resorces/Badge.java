@@ -1,4 +1,4 @@
-package es.upm.miw.rest;
+package es.upm.miw.resorces;
 
 public class Badge {
 
