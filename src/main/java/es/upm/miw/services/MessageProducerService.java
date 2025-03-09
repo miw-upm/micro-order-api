@@ -6,9 +6,10 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import static es.upm.miw.configuration.KafkaStreamsConfig.TOPIC_ORDER_IN;
+
 @Service
 public class MessageProducerService {
-    private static final String TOPIC = "order-in";
     private final Producer<String, String> producer;
 
     @Autowired
@@ -17,6 +18,6 @@ public class MessageProducerService {
     }
 
     public void sendOrder(Order order) {
-        producer.send(new ProducerRecord<>(TOPIC, order.getIdentity(), order.toString()));
+        producer.send(new ProducerRecord<>(TOPIC_ORDER_IN, order.getIdentity(), order.toString()));
     }
 }
