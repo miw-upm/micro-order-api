@@ -2,7 +2,9 @@ spring:
   application:
     name: micro-order-api
   profiles:
+  # Profile ---------------------------------
     active: dev
+  # -----------------------------------------
   output:
     ansi:
       enabled: ALWAYS
@@ -37,3 +39,7 @@ management:
   info:
     env:
       enabled: true
+
+miw:
+  url:
+    micro-user-api: http://localhost:8081
