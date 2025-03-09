@@ -2,11 +2,3 @@ logging:
   level:
     es.upm.miw: DEBUG
 
-spring:
-  cloud:
-    discovery:
-      enabled: false
-
-eureka:
-  client:
-    enabled: false

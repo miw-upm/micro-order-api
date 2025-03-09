@@ -11,11 +11,11 @@ import java.time.LocalDateTime;
 @Service
 public class OrderService {
     private final UserClient userClient;
-    private final MessageProducerService messageProducerService;
+
 
     @Autowired
-    public OrderService(MessageProducerService messageProducerService, UserClient userClient) {
-        this.messageProducerService = messageProducerService;
+    public OrderService(UserClient userClient) {
+
         this.userClient = userClient;
         SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
         requestFactory.setConnectTimeout(10_000);
@@ -24,12 +24,10 @@ public class OrderService {
 
     public Order create(Order order) {
         User user = this.userClient.readUserByIdentity(order.getUser().getIdentity());
-        Order orderCreated = Order.builder()
+        return Order.builder()
                 .identity("1")
                 .productId(order.getProductId())
                 .createdAt(LocalDateTime.now())
                 .user(user).build();
-        this.messageProducerService.sendOrder(orderCreated);
-        return orderCreated;
     }
 }
