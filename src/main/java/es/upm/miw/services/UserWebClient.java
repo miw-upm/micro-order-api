@@ -5,5 +5,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface UserWebClient {
-    User readUserByIdentity( String identity);
+    User readUserByIdentity(String identity);
 }

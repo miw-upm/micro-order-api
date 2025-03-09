@@ -1,2 +1,6 @@
 server:
   port: 10000
+
+miw:
+  url:
+    micro-user-api: http://localhost:8081
