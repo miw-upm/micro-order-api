@@ -32,7 +32,7 @@ class MessageProducerServiceTest {
     private ArgumentCaptor<ProducerRecord<String, String>> captor;
 
     @Test
-    void testSendOrder(){
+    void testSendOrder() {
         Order order = Order.builder()
                 .identity("id")
                 .productId("product-123")

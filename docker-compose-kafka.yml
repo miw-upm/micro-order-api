@@ -1,9 +1,7 @@
 services:
-  kafka:
+  kafka-server:
     image: bitnami/kafka:latest
     container_name: kafka-server
-    networks:
-      - miw
     ports:
       - "9092:9092"
     environment:
@@ -15,10 +13,13 @@ services:
       KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: "LOCAL:PLAINTEXT,DOCKER:PLAINTEXT,CONTROLLER:PLAINTEXT"
       KAFKA_CFG_CONTROLLER_LISTENER_NAMES: "CONTROLLER"
       KAFKA_CFG_INTER_BROKER_LISTENER_NAME: "DOCKER"
+    networks:
+      - miw
 
 networks:
   miw:
     external: true
+
 #> docker compose -f "docker-compose-kafka.yml" -p micro-kafka up -d
 
 #> docker exec kafka kafka-topics.sh --list --bootstrap-server localhost:9092

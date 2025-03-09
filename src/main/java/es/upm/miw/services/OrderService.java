@@ -14,7 +14,7 @@ public class OrderService {
     private final MessageProducerService messageProducerService;
 
     @Autowired
-    public OrderService( UserWebClient userWebClient, MessageProducerService messageProducerService) {
+    public OrderService(UserWebClient userWebClient, MessageProducerService messageProducerService) {
         this.userWebClient = userWebClient;
         this.messageProducerService = messageProducerService;
         SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
