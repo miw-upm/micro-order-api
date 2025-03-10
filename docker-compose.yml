@@ -1,7 +1,7 @@
 services:
   order-api-server:
     build: .
-    image: order-api:v1
+    image: order-api:1.2.0
     container_name: order-api-server
     restart: always
     ports:
