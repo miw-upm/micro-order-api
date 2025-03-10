@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface UserWebClient {
 
     String USERS_IDENTITY_ID = "/users/{identity}";
-    String API_USER = "api-user";
+    String API_USER = "micro-api-user";
 
     @GetMapping(USERS_IDENTITY_ID)
     User readUserByIdentity(@PathVariable String identity);

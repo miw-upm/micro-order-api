@@ -2,7 +2,7 @@ spring:
   application:
     name: micro-order-api
   profiles:
-  # Profile ---------------------------------
+    # Profile ---------------------------------
     active: dev
   # -----------------------------------------
   output:

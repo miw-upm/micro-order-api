@@ -6,7 +6,8 @@ spring:
   cloud:
     discovery:
       enabled: false
-
-eureka:
   client:
     enabled: false
+  instance:
+    leaseRenewalIntervalInSeconds: 0
+    leaseExpirationDurationInSeconds: 0
