@@ -17,7 +17,7 @@ import static org.springframework.http.HttpStatus.OK;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Import(KafkaMockTestConfig.class)
 @ActiveProfiles("test")
-class SystemResourceFunctionalTest {
+class SystemResourceFT {
     @Autowired
     private TestRestTemplate restTemplate;
 

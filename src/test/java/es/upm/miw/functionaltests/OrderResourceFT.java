@@ -26,7 +26,7 @@ import static org.mockito.ArgumentMatchers.anyString;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Import(KafkaMockTestConfig.class)
 @ActiveProfiles("test")
-class OrderResourceFunctionalTest {
+class OrderResourceFT {
     @Autowired
     private TestRestTemplate restTemplate;
 
