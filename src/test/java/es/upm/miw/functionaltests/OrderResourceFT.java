@@ -19,7 +19,7 @@ import static org.mockito.ArgumentMatchers.anyString;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
-class OrderResourceFunctionalTest {
+class OrderResourceFT {
     @Autowired
     private TestRestTemplate restTemplate;
 
