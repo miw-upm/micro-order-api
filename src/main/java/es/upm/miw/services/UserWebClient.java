@@ -5,8 +5,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = UserClient.API_USER)
-public interface UserClient {
+@FeignClient(name = UserWebClient.API_USER)
+public interface UserWebClient {
 
     String USERS_IDENTITY_ID = "/users/{identity}";
     String API_USER = "api-user";

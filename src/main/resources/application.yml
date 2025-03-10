@@ -2,7 +2,9 @@ spring:
   application:
     name: micro-order-api
   profiles:
+  # Profile ---------------------------------
     active: dev
+  # -----------------------------------------
   output:
     ansi:
       enabled: ALWAYS
@@ -10,22 +12,11 @@ spring:
     type: none
   jackson:
     default-property-inclusion: NON_NULL
+
   kafka:
-    properties:
-      allow:
-        auto:
-          create:
-            topics: true
     bootstrap-servers: localhost:9092
     streams:
       application-id: order-app
-
-feign:
-  client:
-    config:
-      default:
-        connectTimeout: 5000
-        readTimeout: 5000
 
 info:
   app:
@@ -57,3 +48,9 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
