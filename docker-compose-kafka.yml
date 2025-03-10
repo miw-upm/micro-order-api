@@ -1,5 +1,5 @@
 services:
-  kafka-server:
+  kafka:
     image: bitnami/kafka:latest
     container_name: kafka-server
     ports:
